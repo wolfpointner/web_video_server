@@ -74,7 +74,10 @@ ament_package()
 
 ## Mark executables and/or libraries for installation
 install(TARGETS ${PROJECT_NAME}
-  DESTINATION lib/${PROJECT_NAME}
+  LIBRARY DESTINATION lib/${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  RUNTIME DESTINATION bin
+
 )
 
 install(DIRECTORY include/${PROJECT_NAME}/
